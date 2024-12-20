@@ -5,6 +5,7 @@ body {
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
+    box-sizing: border-box;
 }
 
 .visually-hidden {
