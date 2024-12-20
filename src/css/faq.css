@@ -8,11 +8,15 @@ body {
 li.ac {
     background-color: #1c1d20;
     color: #fafafa;
-    /* width: 343px; */
     padding: 20px 0;
+    margin-top: 0;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    border-right: none;
+    border-left: none;
+    width: 343px;
 }
 
-.faq-title {
+li.ac .faq-title {
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
@@ -27,6 +31,16 @@ li.ac {
     line-height: 1.5;
     letter-spacing: -0.02em;
     position: relative;
+    width: 80%;
+}
+
+li.ac .ac-trigger {
+    color: #fafafa;
+    box-sizing: border-box;
+}
+
+li.ac .ac-panel .ac-text {
+    color: #fafafa;
 }
 
 .ac-trigger {
@@ -40,7 +54,7 @@ li.ac {
 .faq-btn {
     position: absolute;
     top: 0;
-    right: 40px;
+    right: 0px;
     border: 1px solid rgba(250, 250, 250, 0.2);
     border-radius: 100px;
     padding: 7px;
@@ -59,17 +73,21 @@ li.ac {
 }
 
 @media only screen and (min-width: 768px) {
-    .ac {
+    li.ac {
         padding: 32px 0 24px;
-        /* width: 704px; */
+        width: 704px;
     }
 }
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-    .ac {
+    li.ac {
         padding: 32px 32px 26px;
-        /* width: 688px; */
+        width: 688px;
+    }
+
+    li.ac:nth-child(2n) {
+        border-left: 1px solid rgba(250, 250, 250, 0.2);
     }
 
     .accordion-container {
