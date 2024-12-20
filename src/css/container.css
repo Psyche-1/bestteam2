@@ -4,6 +4,8 @@
   max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
+  padding-bottom: 64px;
+
 }
 
 /* Styles for Tablet devices */
@@ -11,6 +13,7 @@
   .container {
     max-width: 768px;
     padding: 0 32px;
+    padding-bottom: 96px;
   }
 }
 
@@ -19,5 +22,6 @@
   .container {
     max-width: 1440px;
     padding: 0 32px;
+    padding-bottom: 164px;
   }
 }
