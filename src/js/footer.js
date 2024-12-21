@@ -46,7 +46,8 @@ form.addEventListener('submit', async (e) => {
       modal.classList.add('active');
     }
   } catch (error) {
-    modalMessage.textContent = 'Error';
+    console.error('Fetch Error:', error);
+    modalMessage.textContent = 'An error occurred while sending data. Try again.';
     modal.classList.add('active');
   }
 });
