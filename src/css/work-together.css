@@ -1,0 +1,128 @@
+.footer {
+  position: relative;
+}
+
+.work-together {
+  padding: 88px 196px 169px 196px;
+}
+
+.together--text {
+  font-family: Inter Tight;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+}
+
+.together--redText {
+  color: #ED3B44;
+}
+
+.togetheer-textTwo {
+  margin-bottom: 64px;
+}
+
+.form-together {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.together-input {
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  color: #FAFAFA99;
+  height: 44px;
+  background-color: transparent; 
+  border: none;
+  border-bottom: 1px solid #FAFAFA33;
+}
+
+
+
+.togetger-button {
+  border-radius: 50%;
+  border: none;
+  width: 150px;
+  height: 150px;
+  background-color: #ED3B44;
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+}
+
+.together-link {
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.36px;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+  border: 1px solid #FAFAFA33;
+  border-radius: 30px;
+  padding: 18px 32px;
+}
+
+.together-link--one {
+  margin-right: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1C1D20;
+  padding: 64px;
+  z-index: 1000;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #FAFAFA1A;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: -45px;
+  right: -40px;
+  font-size: 26px;
+  cursor: pointer;
+  margin-bottom: 26px;
+}
+
+.modal.active {
+  display: block;
+}
+
+.thank-you-text {
+  font-family: Inter Tight;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #FAFAFA;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.thank-you-text--two {
+  color: #FAFAFA99;
+  font-family: Inter Tight;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
