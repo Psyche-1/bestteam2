@@ -3,7 +3,7 @@ import 'accordion-js/dist/accordion.min.css';
 
 const accordion = new Accordion('.accordion-container', { showMultiple: true });
 
-const arrows = document.querySelectorAll('.ac-trigger');
+const arrows = document.querySelectorAll('.faq-ac-trigger');
 
 for (const arrow of arrows) {
   arrow.addEventListener('click', changeDirectionArrow);
