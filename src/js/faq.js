@@ -1,7 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import arrowUp from './img/icons.svg#icon-icon-up';
-import arrowDown from './img/icons.svg#icon-icon-down';
+import arrow from './img/icons.svg';
 
 const accordion = new Accordion('.accordion-container', { showMultiple: true });
 
@@ -14,8 +13,8 @@ for (const arrow of arrows) {
 function changeDirectionArrow(e) {
   console.log(e.currentTarget.getAttribute('aria-expanded')); //.children[0].children[0]
   if (e.currentTarget.getAttribute('aria-expanded') === 'true') {
-    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrowUp}"></use>`;
+    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrow}#icon-icon-up"></use>`;
   } else if (e.currentTarget.getAttribute('aria-expanded') === 'false') {
-    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrowDown}"></use>`;
+    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrow}#icon-icon-down"></use>`;
   }
 }
