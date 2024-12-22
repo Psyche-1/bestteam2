@@ -1,6 +1,6 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
-import arrow from './img/icons.svg';
+import arrow from '../img/icons.svg';
 
 const accordion = new Accordion('.accordion-container', { showMultiple: true });
 
