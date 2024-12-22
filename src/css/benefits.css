@@ -22,7 +22,7 @@
 }
 
 .benefits-list-item {
-  width: 296px;
+  width: 344px;
   background-color: #242527;
   text-align: start;
   border-radius: 20px;
@@ -30,7 +30,7 @@
 }
 
 .icon {
-  background-color: blue;
+  background-color: #ed3b44;
   width: 24px;
   height: 24px;
   border-radius: 10px;
@@ -114,6 +114,6 @@
   }
 
   .benefits-list-item {
-    width: 284px;
+    width: 332px;
   }
 }
