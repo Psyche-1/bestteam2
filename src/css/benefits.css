@@ -1,0 +1,122 @@
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.benefits-element {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.benefits-list-item {
+  width: 344px;
+  background-color: #242527;
+  text-align: start;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  background-color: #ed3b44;
+  stroke: #fafafa;
+  fill: #ed3b44;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 64px;
+}
+
+.benefits-title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: start;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.benefits-subtitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: start;
+  color: #fafafa;
+  margin-bottom: 8px;
+}
+
+.benefits-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  text-align: start;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.benefits-btn {
+  height: auto;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: -0.02em;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 60px;
+  color: #fafafa;
+  padding: 18px 36px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.benefits-btn:hover,
+.benefits-btn:focus {
+  box-shadow: 0 0 10px 2px #ed3b44;
+}
+
+/* ========================================================================================================================================================
+    Налаштування для планшету Benefits 
+  ======================================================================================================================================================== */
+@media screen and (min-width: 768px) {
+  .benefits-element {
+    width: 704px;
+  }
+
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    column-gap: 16px;
+    margin-bottom: 64px;
+  }
+}
+
+/* ========================================================================================================================================================
+    Налаштування для десктопу Benefits 
+  ======================================================================================================================================================== */
+@media screen and (min-width: 1440px) {
+  .benefits-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .benefits-element {
+    width: 680px;
+  }
+
+  .benefits-list-item {
+    width: 332px;
+  }
+}

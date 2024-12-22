@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.section-covers {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.marquee-container {
+    overflow: hidden;
+    width: 100%;
+    backdrop-filter: blur(30px);
+    background-image: url(../img/covers/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 508px;
+}
+
+.marquee-row,
+.row-reversed {
+    transform: rotate(17deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200%;
+}
+
+.row-reversed {
+    flex-direction: row-reverse;
+}
+
+.marquee-row img {
+    margin-right: 20px;
+    margin-bottom: 25px;
+    width: 282px;
+    height: 162px;
+    animation-name: marqueeLine;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    flex-shrink: 0;
+}
+
+.row-reversed img {
+    margin-right: 20px;
+    margin-bottom: 25px;
+    width: 282px;
+    height: 162px;
+    animation-name: marqueeLineReversed;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    flex-shrink: 0;
+}
+
+@keyframes marqueeLine {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(-180%);
+    }
+}
+
+@keyframes marqueeLineReversed {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(180%);
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .marquee-container {
+        height: 508px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .section-covers {
+        max-width: 768px;
+    }
+
+    .marquee-container {
+        height: 960px;
+        background-image: url(../img/covers/bg-tablet.png);
+    }
+
+    .marquee-row img {
+        margin-right: 40px;
+        margin-bottom: 50px;
+        width: 544px;
+        height: 314px;
+    }
+
+    .row-reversed img {
+        margin-right: 40px;
+        margin-bottom: 50px;
+        width: 544px;
+        height: 314px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .section-covers {
+        max-width: 1440px;
+    }
+
+    .marquee-container {
+        background-image: url(../img/covers/bg-desktop.png);
+    }
+}
