@@ -7,8 +7,6 @@ import 'swiper/swiper-bundle.css';
 const listReviews = document.querySelector('.reviews-list');
 const leftSwiperBtn = document.querySelector('.prev-btn');
 const rightSwiperBtn = document.querySelector('.next-btn');
-const right = document.querySelector('.jsRightArrow');
-const left = document.querySelector('.jsLeftArrow');
 const BASE_URL_REVIEWS = 'https://portfolio-js.b.goit.study/api/reviews';
 
 const swiper = new Swiper('.swiper', {
@@ -104,23 +102,18 @@ function createMarkupReviews(arr) {
 rightSwiperBtn.addEventListener('click', handleNext);
 function handleNext(event) {
   if (swiperE.activeIndex === arrayReviews.length - 1) {
-    right.style.fill = '#3B3B3B';
     return (rightSwiperBtn.disabled = true);
   }
-  right.style.fill = '#fafafa';
   rightSwiperBtn.disabled = false;
   leftSwiperBtn.disabled = false;
   rightSwiperBtn.classList.remove('isHIdden');
   swiper.slideNext(400);
 }
-
 leftSwiperBtn.addEventListener('click', handlePrev);
 function handlePrev(event) {
   if (swiperE.activeIndex === 0) {
-    left.style.fill = '#3B3B3B';
     return (leftSwiperBtn.disabled = true);
   }
-  left.style.fill = '#fafafa';
   leftSwiperBtn.disabled = false;
   rightSwiperBtn.disabled = false;
   leftSwiperBtn.classList.remove('isHIdden');
