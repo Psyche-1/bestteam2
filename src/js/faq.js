@@ -13,9 +13,9 @@ function changeDirectionArrow(e) {
   console.log(e.currentTarget.getAttribute('aria-expanded')); //.children[0].children[0]
   if (e.currentTarget.getAttribute('aria-expanded') === 'true') {
     e.currentTarget.children[0].children[0].innerHTML =
-      '<use href="../img/icons.svg#icon-icon-up"></use>';
+      '<use href="./img/icons.svg#icon-icon-up"></use>';
   } else if (e.currentTarget.getAttribute('aria-expanded') === 'false') {
     e.currentTarget.children[0].children[0].innerHTML =
-      '<use href="../img/icons.svg#icon-icon-down"></use>';
+      '<use href="./img/icons.svg#icon-icon-down"></use>';
   }
 }
