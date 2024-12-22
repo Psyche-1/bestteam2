@@ -15,10 +15,10 @@ function changeDirectionArrow(e) {
   const arrowUp = e.currentTarget.querySelector('.faq-arrow-up');
   // console.log(e.currentTarget.getAttribute('aria-expanded'));
   if (e.currentTarget.getAttribute('aria-expanded') === 'true') {
-    arrowDown.style = 'display: none';
-    arrowUp.style = 'display: block';
+    arrowDown.classList.add('visually-hidden');
+    arrowUp.classList.remove('visually-hidden');
   } else if (e.currentTarget.getAttribute('aria-expanded') === 'false') {
-    arrowDown.style = 'display: block';
-    arrowUp.style = 'display: none';
+    arrowDown.classList.remove('visually-hidden');
+    arrowUp.classList.add('visually-hidden');
   }
 }
