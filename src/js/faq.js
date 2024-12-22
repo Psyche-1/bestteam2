@@ -11,10 +11,14 @@ for (const arrow of arrows) {
 }
 
 function changeDirectionArrow(e) {
-  console.log(e.currentTarget.getAttribute('aria-expanded')); //.children[0].children[0]
+  const arrowDown = e.currentTarget.querySelector('.faq-arrow-down');
+  const arrowUp = e.currentTarget.querySelector('.faq-arrow-up');
+  // console.log(e.currentTarget.getAttribute('aria-expanded'));
   if (e.currentTarget.getAttribute('aria-expanded') === 'true') {
-    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrow}"></use>`;
+    arrowDown.style = 'display: none';
+    arrowUp.style = 'display: block';
   } else if (e.currentTarget.getAttribute('aria-expanded') === 'false') {
-    e.currentTarget.children[0].children[0].innerHTML = `<use href="${arrow}#icon-icon-down"></use>`;
+    arrowDown.style = 'display: block';
+    arrowUp.style = 'display: none';
   }
 }
