@@ -31,6 +31,8 @@
 
 .icon {
   background-color: #ed3b44;
+  width: 24px;
+  height: 24px;
   border-radius: 10px;
   padding: 12px;
   margin-bottom: 64px;
@@ -66,7 +68,6 @@
 }
 
 .benefits-btn {
-  width: 115px;
   height: auto;
   font-weight: 500;
   font-size: 16px;
