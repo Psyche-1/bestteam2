@@ -15,7 +15,7 @@ li.ac {
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
-    margin-bottom: 32px;
+    padding-bottom: 32px;
 }
 
 .ac-header {
@@ -25,7 +25,7 @@ li.ac {
     letter-spacing: -0.02em;
     position: relative;
     width: 80%;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 
 li.ac .ac-trigger {
@@ -66,6 +66,10 @@ li.ac .ac-panel .ac-text {
 }
 
 @media only screen and (min-width: 768px) {
+    .ac-header {
+        padding-bottom: 26px;
+    }
+
     li.ac {
         padding: 32px 0 24px;
         max-width: 704px;
@@ -74,10 +78,6 @@ li.ac .ac-panel .ac-text {
 
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
-    .ac-header {
-        margin-bottom: 26px;
-    }
-
     li.ac {
         padding: 32px 32px 26px;
         max-width: 680px;
