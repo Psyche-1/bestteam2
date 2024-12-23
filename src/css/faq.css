@@ -55,6 +55,12 @@ li.ac .ac-panel .ac-text {
     height: 34px;
     background-color: #1c1d20;
     color: #fafafa;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faq-btn:hover,
+.faq-btn:focus {
+    box-shadow: 0 0 15px #ed3b4466;
 }
 
 .ac-text {
