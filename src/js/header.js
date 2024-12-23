@@ -9,7 +9,7 @@ burger_button.addEventListener("click", () => {
 const close = document.querySelector(".x_icon");
 close.addEventListener("click", () => {
     modal_window.classList.toggle("active");
-});
+});   
 
 
 const nav_link = document.querySelector(".nav_link");
