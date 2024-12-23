@@ -1,14 +1,15 @@
-const button = document.querySelector(".header_menu_img");
+const burger_button = document.querySelector(".header_menu_img");
+const modal_window = document.querySelector(".modal_window");
 
-button.addEventListener("click", () => {
-    document.querySelector(".modal_window").style.display = "flex";
+
+burger_button.addEventListener("click", () => {
+    modal_window.classList.toggle("active");
 });
 
 const close = document.querySelector(".x_icon");
 close.addEventListener("click", () => {
-    document.querySelector(".modal_window").style.display = "none";
+    modal_window.classList.toggle("active");
 });
-
 
 
 const nav_link = document.querySelector(".nav_link");

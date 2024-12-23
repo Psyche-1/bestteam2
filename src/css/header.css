@@ -3,15 +3,19 @@
 .modal_window {
     display: none;
     justify-content: flex-end;
-    pointer-events: all;
+    pointer-events: none;
     position: fixed;
-    z-index: 1;
+    z-index: 9999;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 }
-
+.modal_window.active
+{
+    display: flex;
+    pointer-events: all;
+}
 .modal_content {
     display: flex;
     flex-direction: column;
@@ -21,10 +25,10 @@
     padding-top: 302px;
     padding-bottom: 64px;
     width: 373px;
-    background: image-set(url('./img/header/background_modal.png') 1x,
-            url('./img/header/background_modal@2x.png') 2x,
-            url('./img/header/background_modal@3x.png') 3x);
-    ;
+    background-color: #212121;
+    background-image: image-set(url(../img/header/background_modal.png) 1x,
+            url(../img/header/background_modal@2x.png) 2x,
+            url(../img/header/backgorund_modal@3x.png) 3x);
 
 }
 
@@ -52,7 +56,14 @@
     text-decoration: underline white;
     color: #fafafa;
 }
+.modal_list_item:active,
+.modal_list_item:hover,
+.modal_list_item:focus
+{
 
+    color: #e0373f;
+    text-decoration: underline #e0373f;
+}
 .order_btn {
     border: none;
     background-color: #ed3b44;
