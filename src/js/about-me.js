@@ -3,9 +3,7 @@ import 'accordion-js/dist/accordion.min.css';
 
 import { Keyboard, Navigation } from 'swiper/modules';
 import Swiper from 'swiper';
-import 'swiper/css/bundle';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 new Accordion('.about-accordion-container', {
   duration: 400,
