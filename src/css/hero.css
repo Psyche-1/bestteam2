@@ -1,5 +1,5 @@
 .hero {
-  background-image: url(../img/hero/hero-bg-mobile-1x.jpg);
+  background-image: url(./img/hero/hero-bg-mobile-1x.jpg);
   background-repeat: no-repeat;
   padding: 281px 0 32px 0;
   margin-bottom: 64px;
@@ -10,7 +10,7 @@
   screen and (min-device-pixel-ratio: 2) {
   .hero {
     background-size: contain;
-    background-image: url(../img/hero/hero-bg-mobile-2x.jpg);
+    background-image: url(./img/hero/hero-bg-mobile-2x.jpg);
   }
 }
 
@@ -72,7 +72,7 @@
 
 @media only screen and (min-width: 768px) {
   .hero {
-    background-image: url(../img/hero/hero-bg-tablet-1x.jpg);
+    background-image: url(./img/hero/hero-bg-tablet-1x.jpg);
     background-repeat: no-repeat;
     padding-top: 300px;
   }
@@ -82,7 +82,7 @@
     screen and (min-device-pixel-ratio: 2) {
     .hero {
       background-size: contain;
-      background-image: url(../img/hero/hero-bg-tablet-2x.jpg);
+      background-image: url(./img/hero/hero-bg-tablet-2x.jpg);
     }
   }
 
@@ -115,7 +115,7 @@
 
 @media only screen and (min-width: 1440px) {
   .hero {
-    background-image: url(../img/hero/hero-bg-desktop-1x.jpg);
+    background-image: url(./img/hero/hero-bg-desktop-1x.jpg);
     background-repeat: no-repeat;
     padding: 300px 0 32px 178px;
     margin-bottom: 96px;
@@ -126,7 +126,7 @@
     screen and (min-device-pixel-ratio: 2) {
     .hero {
       background-size: contain;
-      background-image: url(../img/hero/hero-bg-desktop-2x.jpg);
+      background-image: url(./img/hero/hero-bg-desktop-2x.jpg);
     }
   }
 
