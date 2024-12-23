@@ -1,0 +1,287 @@
+.footer {
+  position: relative;
+  font-family: Inter Tight;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.together-container {
+  display: flex;
+  gap: 20px;
+}
+
+.togPng {
+  width: 44px;
+  height: 44px;
+}
+
+.together--text {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  color: #FAFAFA;
+}
+
+.togetheer-textTwo {
+  margin-bottom: 63px;
+}
+
+.together--redText {
+  color: #ED3B44;
+}
+
+.form-together {
+  display: flex;
+  flex-direction: column;
+}
+
+.together-input {
+  color: #FAFAFA99;
+  background-color: transparent; 
+  border: none;
+  border-bottom: 1px solid #FAFAFA33;
+  letter-spacing: -0.02em;
+}
+
+.together-input--one {
+  margin-bottom: 16px;
+}
+
+.together-input--two {
+  margin-bottom: 32px;
+}
+
+.togetger-button {
+  border-radius: 50%;
+  background-color: #ED3B44;
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+  width: 100px;
+  height: 100px;
+  align-items: flex-start;
+  margin-bottom: 64px;
+  border: none;
+  cursor: pointer;
+}
+
+.together-link {
+  letter-spacing: -0.02em;
+  color: #FAFAFA;
+  border: 1px solid #FAFAFA33;
+  border-radius: 30px;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.94px;
+  letter-spacing: -0.02em;
+}
+
+.together-input--one {
+  margin-right: 4px;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1C1D20;
+  z-index: 1000;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid #FAFAFA1A;
+  padding: 64px 32px;
+  width: 363px;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.close-button{
+  position: absolute;
+  cursor: pointer;
+  top: -45px;
+  right: 0;
+  font-size: 22px;
+}
+
+.modal.active {
+  display: block;
+}
+
+.thank-you-text {
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #FAFAFA;
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.thank-you-text--two {
+  color: #FAFAFA99;
+  letter-spacing: -0.02em;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+/* Оверлей */
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(28, 29, 32, 0.5);
+  z-index: 999; /* Убедитесь, что модальное окно поверх */
+  display: none; 
+}
+
+/* Активное состояние */
+.modal-overlay.active {
+  display: block; /* Показываем при активации */
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 80px 32px;
+  }
+
+  .togPng {
+    width: 70px;
+    height: 70px;
+  }
+
+  .together--text {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+  }
+
+  .togetheer-textTwo {
+    margin-bottom: 18px;
+  }
+
+  .togetger-button {
+    width: 150px;
+    height: 150px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .form-together {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  .together-input--one {
+    margin-bottom: 0;
+  }
+
+  .together-input--two {
+    margin-bottom: 0;
+  }
+
+  .together-link {
+    padding: 18px 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+  }
+
+  .together-link--one {
+    margin-right: 8px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .footer {
+    max-width: 1140px;
+  }
+
+  .togPng {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .together--text {
+    font-size: 64px;
+    font-weight: 500;
+    line-height: 64px;
+
+  }
+  
+  .togetheer-textTwo {
+    margin-bottom: 64px;
+  }
+  
+  .form-together {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+  }
+  
+  .together-input {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    height: 44px;
+    width: 390px;
+  }
+  
+  .togetger-button {
+    border: none;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+  }
+  
+  .together-link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19.36px;
+    padding: 18px 32px;
+  }
+  
+  .together-link--one {
+    margin-right: 8px;
+  }
+  
+  .modal {
+    padding: 64px;
+  }
+  
+  .close-button {
+    top: -45px;
+    right: -40px;
+    font-size: 26px;
+    margin-bottom: 26px;
+  }
+  
+  .thank-you-text {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 16px;
+
+  }
+  
+  .thank-you-text--two {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+  } 
+}
