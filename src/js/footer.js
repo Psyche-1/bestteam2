@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 const form = document.getElementById('form-together');
 const modal = document.getElementById('successModal');
 const modalOverlay = document.getElementById('modalOverlay');
@@ -15,44 +17,49 @@ form.addEventListener('submit', async (e) => {
   const emailInput = document.getElementById('together-input--email');
   const commentsInput = document.getElementById('together-input--comments');
   const data = {
-    email: emailInput.value,
-    comment: commentsInput.value,
+    email: emailInput.value.trim(),
+    comment: commentsInput.value.trim(),
   };
 
+  if (!data.email || !data.comment) {
+    modalMessage.textContent = 'Please fill out all required fields.';
+    modal.classList.add('active');
+    modalOverlay.classList.add('active');
+    return; 
+  }
+
   try {
-    const response = await fetch('https://portfolio-js.b.goit.study/api/requests', {
-      method: 'POST',
+    const response = await axios.post('https://portfolio-js.b.goit.study/api/requests', data, {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
     });
 
-    if (response.ok) {
-      const responseData = await response.json();
-      modalMessage.innerHTML = `
-        <span class="thank-you-text">${responseData.title}</span><br>
-        <span class="thank-you-text--two">${responseData.message}</span>
-      `;
-      modal.classList.add('active');
-      modalOverlay.classList.add('active'); 
-      form.reset(); 
-    } else {
-      let errorMessage = 'An error occurred while sending data. Try again.';
-      if (response.status === 400) {
+    const responseData = response.data;
+    modalMessage.innerHTML = `
+      <span class="thank-you-text">${responseData.title}</span><br>
+      <span class="thank-you-text--two">${responseData.message}</span>
+    `;
+    modal.classList.add('active');
+    modalOverlay.classList.add('active');
+    form.reset();
+  } catch (error) {
+    let errorMessage = 'An error occurred while sending data. Try again.';
+    if (error.response) {
+      if (error.response.status === 400) {
         errorMessage = 'Bad request: Invalid request body.';
-      } else if (response.status === 404) {
+      } else if (error.response.status === 404) {
         errorMessage = 'Not found: The requested resource could not be found.';
-      } else if (response.status === 500) {
+      } else if (error.response.status === 500) {
         errorMessage = 'Server error: Please try again later.';
       }
-      modalMessage.textContent = errorMessage;
-      modal.classList.add('active');
-      modalOverlay.classList.add('active');
+    } else if (error.request) {
+      errorMessage = 'A network error occurred. Please check your connection and try again.';
+    } else {
+      errorMessage = `Error: ${error.message}`;
     }
-  } catch (error) {
-    console.error('Fetch Error:', error.message);
-    modalMessage.textContent = 'Fetch Error';
+
+    modalMessage.textContent = errorMessage;
     modal.classList.add('active');
     modalOverlay.classList.add('active');
   }
@@ -61,3 +68,5 @@ form.addEventListener('submit', async (e) => {
 closeModal.addEventListener('click', closeModalWindow);
 
 modalOverlay.addEventListener('click', closeModalWindow);
+
+
