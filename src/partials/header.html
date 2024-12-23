@@ -1,5 +1,55 @@
 <header class="header">
   <div class="container">
+    <div class="header_logo">
+      <picture class="logo_img">
+        <source
+          srcset="../img/header/jefferson.png"
+          media="(max-width: 768px)"
+        />
+        <source
+          srcset="../img/header/jefferson_desktop.png"
+          media="(min-width: 769px)"
+        />
+        <img
+          src="../img/header/jefferson_desktop.png"
+          alt="Jefferson Image"
+          width="80"
+          height="80"
+        />
+      </picture>
 
+      <p class="logo_legend">jefferson*</p>
+    </div>
+
+    <div class="menu_container">
+      <button class="menu_trigger">Menu</button>
+      <nav class="menu">
+        <a href="#about-me" class="nav_link">About me</a>
+        <a href="#benefits" class="nav_link">Benefits</a>
+        <a href="#projects" class="nav_link">Projects</a>
+        <a href="#faq" class="nav_link">FAQ</a>
+      </nav>
+    </div>
+    <button type="button" class="order_btn wide">Order the project</button>
+
+    <svg class="header_menu_img">
+      <use href="../img/icons.svg#icon-menu"></use>
+    </svg>
   </div>
 </header>
+<div class="modal_window">
+  <div class="modal">
+    <svg class="x_icon">
+      <use href="../img/icons.svg#icon-x"></use>
+    </svg>
+    <div class="modal_options">
+      <ul class="modal_menu">
+        <li class="header_list_item"><a href="#about-me">About me</a></li>
+        <li class="header_list_item"><a href="#benefits">Benefits</a></li>
+        <li class="header_list_item"><a href="#projects">Projects</a></li>
+        <li class="header_list_item"><a href="#faq">FAQ</a></li>
+      </ul>
+      <button type="button" class="order_btn">Order the project</button>
+    </div>
+  </div>
+</div>
