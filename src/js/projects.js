@@ -65,6 +65,22 @@ function createMarkUp(img) {
             <source
                 srcset="${item.mob} 1x, ${item.mob2x} 2x"
                 media="(max-width: 767px)"
+swiper.on('progress', (swiper, progress) => {
+  if (progress === 1) {
+    nextButton.disabled = true;
+    buttonIcons[1].classList.add('projects-button-icon-disabled');
+    return;
+  } else if (progress === 0) {
+    prevButton.disabled = true;
+    buttonIcons[0].classList.add('projects-button-icon-disabled');
+    return;
+  }
+
+  buttonIcons[0].classList.remove('projects-button-icon-disabled');
+  buttonIcons[1].classList.remove('projects-button-icon-disabled');
+  nextButton.disabled = false;
+  prevButton.disabled = false;
+});
             />
             <img src=${firstImgDst} alt="project image" />
             </picture>
@@ -100,20 +116,3 @@ const swiper = new Swiper('.swiper', {
 const prevButton = document.querySelector('.button-prev');
 const nextButton = document.querySelector('.button-next');
 const buttonIcons = document.querySelectorAll('.projects-button-icon');
-
-swiper.on('progress', (swiper, progress) => {
-  if (progress === 1) {
-    nextButton.disabled = true;
-    buttonIcons[1].classList.add('projects-button-icon-disabled');
-    return;
-  } else if (progress === 0) {
-    prevButton.disabled = true;
-    buttonIcons[0].classList.add('projects-button-icon-disabled');
-    return;
-  }
-
-  buttonIcons[0].classList.remove('projects-button-icon-disabled');
-  buttonIcons[1].classList.remove('projects-button-icon-disabled');
-  nextButton.disabled = false;
-  prevButton.disabled = false;
-});

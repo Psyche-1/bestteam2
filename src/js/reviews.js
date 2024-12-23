@@ -2,8 +2,8 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import Swiper from 'swiper';
-import 'swiper/swiper-bundle.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 const listReviews = document.querySelector('.reviews-list');
 const leftSwiperBtn = document.querySelector('.prev-btn');
 const rightSwiperBtn = document.querySelector('.next-btn');
@@ -35,7 +35,7 @@ const swiperE = document.querySelector('.swiper').swiper;
 
 let arrayReviews;
 // We monitor the Reviews section so that the error window does not pop up until you view the Reviews section
-const guard = document.querySelector('.reviews-container');
+const guard = document.querySelector('.sec-reviews');
 const options = {
   root: null,
   rootMargin: '0px',
