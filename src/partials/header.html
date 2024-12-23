@@ -2,10 +2,10 @@
   <div class="container">
     <div class="header_logo">
       <img
-        src="../img/header/jefferson.png"
+        src="./img/header/jefferson.png"
         srcset="
-          ../img/header/jefferson@2x.png 2x,
-          ../img/header/jefferson@3x.png 3x
+          ./img/header/jefferson@2x.png 2x,
+          ./img/header/jefferson@3x.png 3x
         "
         alt="jefferson.png"
         class="logo_img"
@@ -26,23 +26,22 @@
     <button type="button" class="order_btn wide">Order the project</button>
 
     <svg class="header_menu_img">
-      <use href="../img/icons.svg#icon-menu"></use>
+      <use href="./img/icons.svg#icon-menu"></use>
     </svg>
   </div>
-</header>
-<div class="modal_window">
-  <div class="modal">
-    <svg class="x_icon">
-      <use href="../img/icons.svg#icon-x"></use>
-    </svg>
-    <div class="modal_options">
+
+  <div class="modal_window">
+    <div class="modal_content">
+      <svg class="x_icon">
+        <use href="./img/icons.svg#icon-x"></use>
+      </svg>
       <ul class="modal_menu">
-        <li class="header_list_item"><a href="#about-me">About me</a></li>
-        <li class="header_list_item"><a href="#benefits">Benefits</a></li>
-        <li class="header_list_item"><a href="#projects">Projects</a></li>
-        <li class="header_list_item"><a href="#faq">FAQ</a></li>
+        <li><a class="modal_list_item" href="#about-me">About me</a></li>
+        <li><a class="modal_list_item" href="#benefits">Benefits</a></li>
+        <li><a class="modal_list_item" href="#projects">Projects</a></li>
+        <li><a class="modal_list_item" href="#faq">FAQ</a></li>
       </ul>
       <button type="button" class="order_btn">Order the project</button>
     </div>
   </div>
-</div>
+</header>
