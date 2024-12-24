@@ -15,7 +15,7 @@ import{A as L,S as b,N as M,K as P,a as S,i as k}from"./assets/vendor-DPRnm3ij.j
             <h3 class="projects-item-info-descr-title">
                 Programming Across Borders: Ideas, Technologies, Innovations
             </h3>
-            <a target="_blank" href="https://psyche-1.github.io/bestteam2/" class="projects-item-info-descr-link">See project</a>
+            <a target="_blank" href="https://github.com/Psyche-1/bestteam2/" class="projects-item-info-descr-link">See project</a>
             </div>
         </div>
         <div class="projects-item-project">
