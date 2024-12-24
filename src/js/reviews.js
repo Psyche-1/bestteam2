@@ -3,13 +3,13 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+import 'swiper/css';
 const listReviews = document.querySelector('.reviews-list');
 const leftSwiperBtn = document.querySelector('.prev-btn');
 const rightSwiperBtn = document.querySelector('.next-btn');
 const BASE_URL_REVIEWS = 'https://portfolio-js.b.goit.study/api/reviews';
 
-const swiper = new Swiper('.swiper', {
+const swiperReviews = new Swiper('.swiper', {
   speed: 400,
   breakpoints: {
     320: {
@@ -31,7 +31,7 @@ const swiper = new Swiper('.swiper', {
     invert: true,
   },
 });
-const swiperE = document.querySelector('.swiper').swiper;
+const swiperE = document.querySelector('.swiper').swiperReviews;
 
 let arrayReviews;
 // We monitor the Reviews section so that the error window does not pop up until you view the Reviews section
@@ -45,7 +45,7 @@ const guardService = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio) {
       async function serviceReviews(url = BASE_URL_REVIEWS, optionsA = {}) {
-        swiper.enable();
+        // swiperReviews.enable();
         const response = await axios(url, optionsA);
 
         return response.data;
@@ -76,7 +76,7 @@ const guardService = (entries, observer) => {
             displayMode: 1,
           });
           listReviews.innerHTML = `<p>Not found</p>`;
-          swiper.disable();
+          // swiperReviews.disable();
           leftSwiperBtn.classList.add('isHIdden');
           rightSwiperBtn.classList.add('isHIdden');
         });
@@ -107,7 +107,7 @@ function handleNext(event) {
   rightSwiperBtn.disabled = false;
   leftSwiperBtn.disabled = false;
   rightSwiperBtn.classList.remove('isHIdden');
-  swiper.slideNext(400);
+  swiperReviews.slideNext(400);
 }
 leftSwiperBtn.addEventListener('click', handlePrev);
 function handlePrev(event) {
@@ -117,5 +117,5 @@ function handlePrev(event) {
   leftSwiperBtn.disabled = false;
   rightSwiperBtn.disabled = false;
   leftSwiperBtn.classList.remove('isHIdden');
-  swiper.slidePrev(400);
+  swiperReviews.slidePrev(400);
 }
