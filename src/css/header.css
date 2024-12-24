@@ -26,10 +26,22 @@
     padding-bottom: 64px;
     width: 373px;
     background-color: #212121;
-    background-image: image-set(url(../img/header/background_modal.png) 1x,
-            url(../img/header/background_modal@2x.png) 2x,
-            url(../img/header/backgorund_modal@3x.png) 3x);
+    background-image: url('../img/header/background_modal.png');
+    background-size: cover;
+}
 
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .modal_content {
+        background-image: url('../img/header/background_modal@2x.png');
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 3),
+(min-resolution: 288dpi) {
+    .modal_content {
+        background-image: url('../img/header/background_modal@3x.png');
+    }
 }
 
 .x_icon {
@@ -202,8 +214,10 @@
         pointer-events: none;
     }
 
-    .order_btn.wide {
-        display: flex;
+    .order_btn.wide:focus,
+    .order_btn.wide:active,
+    .order_btn.wide:hover {
+        background-color: #e0373f;
     }
 
     .order_btn.wide {
@@ -370,7 +384,11 @@
         cursor: pointer;
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-
+.order_btn.wide:focus,
+.order_btn.wide:active,
+.order_btn.wide:hover {
+    background-color: #e0373f;
+}
     .order_btn.wide {
         display: flex;
         align-items: center;
