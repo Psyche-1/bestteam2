@@ -1,7 +1,6 @@
  .about-me-container {
      display: flex;
      flex-direction: column;
-     margin: 0 auto;
      width: 100%;
  }
 
@@ -12,7 +11,8 @@
 }
 
  .about-me-text {
-     padding: 32px 32px 272px;
+     padding: 32px 32px;
+     height: 420px;
      font-size: 24px;
      line-height: 1.17;
      letter-spacing: -0.03em;
@@ -228,10 +228,11 @@ li.ac .ac-panel .ac-text .about-list-text-item:last-child {
         margin-bottom: 64px;
     }
     .about-me-text {
-        padding: 64px 64px 436px;
+        padding: 64px 64px;
         font-size: 38px;
         line-height: 1.05;
         max-width: 704px;
+        height: 700px;
     }
     .about-accordion-container {
         margin-bottom: 64px;
