@@ -53,7 +53,7 @@ function createMarkUp(img) {
             <h3 class="projects-item-info-descr-title">
                 Programming Across Borders: Ideas, Technologies, Innovations
             </h3>
-            <a target="_blank" href="https://psyche-1.github.io/bestteam2/" class="projects-item-info-descr-link">See project</a>
+            <a target="_blank" href="https://github.com/Psyche-1/bestteam2/" class="projects-item-info-descr-link">See project</a>
             </div>
         </div>
         <div class="projects-item-project">
