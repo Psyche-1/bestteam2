@@ -78,8 +78,9 @@ function createMarkUp(img) {
 
 list.insertAdjacentHTML('beforeend', createMarkUp(images));
 
-const swiper = new Swiper('.swiper', {
+const projectSwiper = new Swiper('.projects-swiper', {
   // Optional parameters
+  slidesPerView: 1,
   direction: 'horizontal',
   loop: false,
   speed: 400,
@@ -101,7 +102,7 @@ const prevButton = document.querySelector('.button-prev');
 const nextButton = document.querySelector('.button-next');
 const buttonIcons = document.querySelectorAll('.projects-button-icon');
 
-swiper.on('progress', (swiper, progress) => {
+projectSwiper.on('progress', (swiper, progress) => {
   if (progress === 1) {
     nextButton.disabled = true;
     buttonIcons[1].classList.add('projects-button-icon-disabled');
