@@ -101,21 +101,27 @@ function createMarkupReviews(arr) {
 
 rightSwiperBtn.addEventListener('click', handleNext);
 function handleNext(event) {
-  if (swiperE.activeIndex === arrayReviews.length - 1) {
-    return (rightSwiperBtn.disabled = true);
-  }
-  rightSwiperBtn.disabled = false;
-  leftSwiperBtn.disabled = false;
-  rightSwiperBtn.classList.remove('isHIdden');
-  swiperReviews.slideNext(400);
+  swiperReviews.on('progress', (swiper, progress) => {
+    if (progress === 1) {
+      rightSwiperBtn.disabled = true;
+      return;
+    }
+    rightSwiperBtn.disabled = false;
+    leftSwiperBtn.disabled = false;
+    rightSwiperBtn.classList.remove('isHIdden');
+    swiperReviews.slideNext(400);
+  });
 }
 leftSwiperBtn.addEventListener('click', handlePrev);
 function handlePrev(event) {
-  if (swiperE.activeIndex === 0) {
-    return (leftSwiperBtn.disabled = true);
-  }
-  leftSwiperBtn.disabled = false;
-  rightSwiperBtn.disabled = false;
-  leftSwiperBtn.classList.remove('isHIdden');
-  swiperReviews.slidePrev(400);
+  swiperReviews.on('progress', (swiper, progress) => {
+    if (progress === 0) {
+      leftSwiperBtn.disabled = true;
+      return;
+    }
+    rightSwiperBtn.disabled = false;
+    leftSwiperBtn.disabled = false;
+    leftSwiperBtn.classList.remove('isHIdden');
+    swiperReviews.slidePrev(400);
+  });
 }
