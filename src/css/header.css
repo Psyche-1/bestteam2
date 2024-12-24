@@ -1,5 +1,7 @@
 /* modal window */
-
+html {
+    scroll-behavior: smooth;
+}
 .modal_window {
     display: none;
     justify-content: flex-end;
@@ -50,6 +52,7 @@
     top: 32px;
     width: 28px;
     height: 28px;
+    cursor: pointer;
 }
 
 .modal_menu {
@@ -131,7 +134,9 @@
     .header_menu_img {
         width: 24px;
         height: 24px;
+        cursor: pointer; 
     }
+    
 
     .menu_container {
         display: none;
@@ -171,6 +176,7 @@
     .header_menu_img {
         width: 24px;
         height: 24px;
+        cursor: pointer;
     }
 
     .menu_container {
@@ -235,7 +241,6 @@
         letter-spacing: -0.02em;
         color: #fafafa;
 
-        justify-self: flex-end;
         border-radius: 60px;
         padding: 14px 31px;
         width: 164px;
@@ -297,6 +302,7 @@
         text-decoration: underline;
         text-decoration-skip-ink: none;
         color: #fafafa;
+        scroll-behavior:smooth;
     }
 
     .nav_link:focus,
