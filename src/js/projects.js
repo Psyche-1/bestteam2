@@ -53,7 +53,7 @@ function createMarkUp(img) {
             <h3 class="projects-item-info-descr-title">
                 Programming Across Borders: Ideas, Technologies, Innovations
             </h3>
-            <a target="_blank" href="https://psyche-1.github.io/bestteam2/" class="projects-item-info-descr-link">See project</a>
+            <a target="_blank" href="https://github.com/Psyche-1/bestteam2/" class="projects-item-info-descr-link">See project</a>
             </div>
         </div>
         <div class="projects-item-project">
@@ -65,22 +65,6 @@ function createMarkUp(img) {
             <source
                 srcset="${item.mob} 1x, ${item.mob2x} 2x"
                 media="(max-width: 767px)"
-swiper.on('progress', (swiper, progress) => {
-  if (progress === 1) {
-    nextButton.disabled = true;
-    buttonIcons[1].classList.add('projects-button-icon-disabled');
-    return;
-  } else if (progress === 0) {
-    prevButton.disabled = true;
-    buttonIcons[0].classList.add('projects-button-icon-disabled');
-    return;
-  }
-
-  buttonIcons[0].classList.remove('projects-button-icon-disabled');
-  buttonIcons[1].classList.remove('projects-button-icon-disabled');
-  nextButton.disabled = false;
-  prevButton.disabled = false;
-});
             />
             <img src=${firstImgDst} alt="project image" />
             </picture>
@@ -94,8 +78,9 @@ swiper.on('progress', (swiper, progress) => {
 
 list.insertAdjacentHTML('beforeend', createMarkUp(images));
 
-const swiper = new Swiper('.swiper', {
+const projectSwiper = new Swiper('.projects-swiper', {
   // Optional parameters
+  slidesPerView: 1,
   direction: 'horizontal',
   loop: false,
   speed: 400,
@@ -116,3 +101,20 @@ const swiper = new Swiper('.swiper', {
 const prevButton = document.querySelector('.button-prev');
 const nextButton = document.querySelector('.button-next');
 const buttonIcons = document.querySelectorAll('.projects-button-icon');
+
+projectSwiper.on('progress', (swiper, progress) => {
+  if (progress === 1) {
+    nextButton.disabled = true;
+    buttonIcons[1].classList.add('projects-button-icon-disabled');
+    return;
+  } else if (progress === 0) {
+    prevButton.disabled = true;
+    buttonIcons[0].classList.add('projects-button-icon-disabled');
+    return;
+  }
+
+  buttonIcons[0].classList.remove('projects-button-icon-disabled');
+  buttonIcons[1].classList.remove('projects-button-icon-disabled');
+  nextButton.disabled = false;
+  prevButton.disabled = false;
+});
