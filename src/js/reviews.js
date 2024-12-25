@@ -52,15 +52,16 @@ const guardService = (entries, observer) => {
 
       serviceReviews()
         .then(data => {
-          leftSwiperBtn.classList.remove('isHIdden');
-          rightSwiperBtn.classList.remove('isHIdden');
-
           arrayReviews = data;
 
           listReviews.insertAdjacentHTML(
             'beforeend',
             createMarkupReviews(data)
           );
+          swiperReviews.update();
+
+          leftSwiperBtn.classList.remove('isHIdden');
+          rightSwiperBtn.classList.remove('isHIdden');
           leftSwiperBtn.disabled = true;
 
           swiperReviews.on('reachEnd', function () {
