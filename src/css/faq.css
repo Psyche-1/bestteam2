@@ -15,7 +15,7 @@ li.ac {
     line-height: 1.5;
     letter-spacing: -0.02em;
     color: rgba(250, 250, 250, 0.4);
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 }
 
 .ac-header .ac-trigger .faq-ac-trigger {
