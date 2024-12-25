@@ -1,11 +1,13 @@
+section {
+  padding-bottom: 64px;
+}
+
 /* Styles for Mobile devices */
 .container {
   min-width: 320px;
   max-width: 375px;
   margin: 0 auto;
   padding: 0 16px;
-  padding-bottom: 64px;
-
 }
 
 /* Styles for Tablet devices */
