@@ -25,7 +25,7 @@ screen and (min-device-pixel-ratio: 2) {
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  width: 343px;
+  max-width: 343px;
   margin-bottom: 212px;
 }
 
