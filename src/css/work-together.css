@@ -66,6 +66,11 @@
   cursor: pointer;
 }
 
+.together-links {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .together-link {
   letter-spacing: -0.02em;
   color: #FAFAFA;
