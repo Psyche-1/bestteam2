@@ -25,12 +25,11 @@ section {
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   section {
-    padding-bottom: 96px;
+    padding-bottom: 164px;
   }
 
   .container {
     max-width: 1440px;
     padding: 0 32px;
-    padding-bottom: 164px;
   }
 }
