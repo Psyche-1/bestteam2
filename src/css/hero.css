@@ -2,6 +2,7 @@
   background-image: url(../img/hero/hero-bg-mobile-1x.jpg);
   background-repeat: no-repeat;
   padding: 281px 0 32px 0;
+  margin-bottom: 64px;
 }
 
 @media screen and (min-resolution: 192dpi),
@@ -71,7 +72,7 @@ screen and (min-device-pixel-ratio: 2) {
 .hero-email:hover,
 .hero-email:focus {
   border: 1px solid #fafafa;
-} 
+}
 
 @media only screen and (min-width: 768px) {
   .hero {
@@ -86,6 +87,7 @@ screen and (min-device-pixel-ratio: 2) {
     .hero {
       background-size: contain;
       background-image: url(../img/hero/hero-bg-tablet-2x.jpg);
+      margin-bottom: 96px;
     }
   }
 
