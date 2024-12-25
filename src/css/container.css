@@ -1,5 +1,10 @@
 section {
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+footer {
+  padding-top: 32px;
 }
 
 /* Styles for Mobile devices */
@@ -13,7 +18,12 @@ section {
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
   section {
-    padding-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
+  footer {
+    padding-top: 48px;
   }
 
   .container {
@@ -25,7 +35,12 @@ section {
 /* Styles for Desktop devices */
 @media only screen and (min-width: 1440px) {
   section {
-    padding-bottom: 164px;
+    padding-top: 82px;
+    padding-bottom: 82px;
+  }
+
+  footer {
+    padding-top: 82px;
   }
 
   .container {

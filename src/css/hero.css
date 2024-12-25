@@ -25,7 +25,7 @@ screen and (min-device-pixel-ratio: 2) {
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
-  width: 343px;
+  max-width: 343px;
   margin-bottom: 212px;
 }
 
@@ -93,7 +93,7 @@ screen and (min-device-pixel-ratio: 2) {
 
   .hero-title {
     font-size: 90px;
-    width: 632px;
+    max-width: 632px;
     margin-bottom: 178px;
   }
 
@@ -135,7 +135,7 @@ screen and (min-device-pixel-ratio: 2) {
 
   .hero-title {
     margin-bottom: 243px;
-    width: 1084px;
+    max-width: 1084px;
   }
 
 }
