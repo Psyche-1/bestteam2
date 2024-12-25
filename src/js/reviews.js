@@ -61,8 +61,13 @@ const guardService = (entries, observer) => {
             'beforeend',
             createMarkupReviews(data)
           );
+          leftSwiperBtn.disabled = true;
+
           swiperReviews.on('reachEnd', function () {
             return (rightSwiperBtn.disabled = true);
+          });
+          swiperReviews.on('reachBeginning', function () {
+            return (leftSwiperBtn.disabled = true);
           });
         })
         .catch(err => {
@@ -77,7 +82,7 @@ const guardService = (entries, observer) => {
             timeout: 5000,
             displayMode: 1,
           });
-          listReviews.innerHTML = `<p>Not found</p>`;
+          listReviews.innerHTML = '<p>Not found</p>';
           swiperReviews.disable();
           leftSwiperBtn.classList.add('isHIdden');
           rightSwiperBtn.classList.add('isHIdden');
@@ -107,14 +112,11 @@ function handleNext(event) {
   rightSwiperBtn.classList.remove('isHIdden');
   swiperReviews.slideNext(400);
 }
+
 leftSwiperBtn.addEventListener('click', handlePrev);
 function handlePrev(event) {
   rightSwiperBtn.disabled = false;
-  if (swiperReviews.activeIndex === 0) {
-    return (leftSwiperBtn.disabled = true);
-  }
   leftSwiperBtn.disabled = false;
-  rightSwiperBtn.disabled = false;
   leftSwiperBtn.classList.remove('isHIdden');
   swiperReviews.slidePrev(400);
 }
