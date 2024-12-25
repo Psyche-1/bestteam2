@@ -39,7 +39,7 @@
 
 .together-input {
   color: #FAFAFA99;
-  background-color: transparent; 
+  background-color: transparent;
   border: none;
   border-bottom: 1px solid #FAFAFA33;
   letter-spacing: -0.02em;
@@ -84,7 +84,7 @@
 
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -101,7 +101,7 @@
   position: relative;
 }
 
-.close-button{
+.close-button {
   position: absolute;
   cursor: pointer;
   top: -45px;
@@ -134,19 +134,21 @@
 
 /* Оверлей */
 .modal-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(28, 29, 32, 0.5);
-  z-index: 999; /* Убедитесь, что модальное окно поверх */
-  display: none; 
+  z-index: 999;
+  /* Убедитесь, что модальное окно поверх */
+  display: none;
 }
 
 /* Активное состояние */
 .modal-overlay.active {
-  display: block; /* Показываем при активации */
+  display: block;
+  /* Показываем при активации */
 }
 
 @media screen and (min-width: 768px) {
@@ -214,24 +216,24 @@
     width: 70px;
     height: 70px;
   }
-  
+
   .together--text {
     font-size: 64px;
     font-weight: 500;
     line-height: 64px;
 
   }
-  
+
   .togetheer-textTwo {
     margin-bottom: 64px;
   }
-  
+
   .form-together {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 18px;
   }
-  
+
   .together-input {
     font-size: 16px;
     font-weight: 500;
@@ -239,7 +241,7 @@
     height: 44px;
     width: 390px;
   }
-  
+
   .togetger-button {
     border: none;
     width: 150px;
@@ -248,29 +250,29 @@
     font-weight: 500;
     line-height: 19.36px;
   }
-  
+
   .together-link {
     font-size: 16px;
     font-weight: 500;
     line-height: 19.36px;
     padding: 18px 32px;
   }
-  
+
   .together-link--one {
     margin-right: 8px;
   }
-  
+
   .modal {
     padding: 64px;
   }
-  
+
   .close-button {
     top: -45px;
     right: -40px;
     font-size: 26px;
     margin-bottom: 26px;
   }
-  
+
   .thank-you-text {
     font-size: 20px;
     font-weight: 600;
@@ -278,10 +280,10 @@
     margin-bottom: 16px;
 
   }
-  
+
   .thank-you-text--two {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
-  } 
+  }
 }
