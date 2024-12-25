@@ -31,7 +31,6 @@ const swiperReviews = new Swiper('.swiper', {
     invert: true,
   },
 });
-const swiperE = document.querySelector('.swiper').swiperReviews;
 
 let arrayReviews;
 // We monitor the Reviews section so that the error window does not pop up until you view the Reviews section
@@ -45,7 +44,7 @@ const guardService = (entries, observer) => {
   entries.forEach(entry => {
     if (entry.intersectionRatio) {
       async function serviceReviews(url = BASE_URL_REVIEWS, optionsA = {}) {
-        // swiperReviews.enable();
+        swiperReviews.enable();
         const response = await axios(url, optionsA);
 
         return response.data;
@@ -62,6 +61,14 @@ const guardService = (entries, observer) => {
             'beforeend',
             createMarkupReviews(data)
           );
+          leftSwiperBtn.disabled = true;
+
+          swiperReviews.on('reachEnd', function () {
+            return (rightSwiperBtn.disabled = true);
+          });
+          swiperReviews.on('reachBeginning', function () {
+            return (leftSwiperBtn.disabled = true);
+          });
         })
         .catch(err => {
           iziToast.show({
@@ -75,8 +82,8 @@ const guardService = (entries, observer) => {
             timeout: 5000,
             displayMode: 1,
           });
-          listReviews.innerHTML = `<p>Not found</p>`;
-          // swiperReviews.disable();
+          listReviews.innerHTML = '<p>Not found</p>';
+          swiperReviews.disable();
           leftSwiperBtn.classList.add('isHIdden');
           rightSwiperBtn.classList.add('isHIdden');
         });
@@ -101,27 +108,15 @@ function createMarkupReviews(arr) {
 
 rightSwiperBtn.addEventListener('click', handleNext);
 function handleNext(event) {
-  swiperReviews.on('progress', (swiper, progress) => {
-    if (progress === 1) {
-      rightSwiperBtn.disabled = true;
-      return;
-    }
-    rightSwiperBtn.disabled = false;
-    leftSwiperBtn.disabled = false;
-    rightSwiperBtn.classList.remove('isHIdden');
-    swiperReviews.slideNext(400);
-  });
+  leftSwiperBtn.disabled = false;
+  rightSwiperBtn.classList.remove('isHIdden');
+  swiperReviews.slideNext(400);
 }
+
 leftSwiperBtn.addEventListener('click', handlePrev);
 function handlePrev(event) {
-  swiperReviews.on('progress', (swiper, progress) => {
-    if (progress === 0) {
-      leftSwiperBtn.disabled = true;
-      return;
-    }
-    rightSwiperBtn.disabled = false;
-    leftSwiperBtn.disabled = false;
-    leftSwiperBtn.classList.remove('isHIdden');
-    swiperReviews.slidePrev(400);
-  });
+  rightSwiperBtn.disabled = false;
+  leftSwiperBtn.disabled = false;
+  leftSwiperBtn.classList.remove('isHIdden');
+  swiperReviews.slidePrev(400);
 }
