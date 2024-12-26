@@ -1,4 +1,5 @@
 .benefits-container {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -22,7 +23,6 @@
 }
 
 .benefits-list-item {
-  width: 344px;
   background-color: #242527;
   text-align: start;
   border-radius: 20px;
@@ -100,6 +100,10 @@
     justify-content: flex-start;
     column-gap: 16px;
     margin-bottom: 64px;
+  }
+
+  .benefits-list-item {
+    width: 344px;
   }
 }
 
