@@ -38,12 +38,32 @@
 }
 
 .together-input {
+  position: relative;
   color: #FAFAFA99;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #FAFAFA33;
   letter-spacing: -0.02em;
+  padding-bottom: 20px;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.together-input:focus {
+  border: none;
+  outline: none;
+  color: rgba(250, 250, 250, 1);
+  border-bottom: 1px solid rgba(250, 250, 250, 1);
+}
+
+.together-input:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -20px;
+  height: 1px;
+}
+
 
 .together-input--one {
   margin-bottom: 16px;
@@ -64,6 +84,11 @@
   margin-bottom: 64px;
   border: none;
   cursor: pointer;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.togetger-button:hover {
+  background-color: rgba(224, 55, 63, 1);
 }
 
 .together-links {
@@ -81,6 +106,11 @@
   font-weight: 500;
   line-height: 16.94px;
   letter-spacing: -0.02em;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.together-link:hover {
+  border: 1px solid rgba(250, 250, 250, 1);
 }
 
 .together-input--one {
@@ -146,15 +176,19 @@
   height: 100%;
   background-color: rgba(28, 29, 32, 0.5);
   z-index: 999;
-  /* Убедитесь, что модальное окно поверх */
   display: none;
 }
 
-/* Активное состояние */
 .modal-overlay.active {
   display: block;
-  /* Показываем при активации */
 }
+
+@media screen and (min-width: 1px) and (max-width: 328px){
+  .together-link--one {
+    margin-bottom: 10px;
+  }
+}
+
 
 @media screen and (min-width: 768px) {
   .footer {
