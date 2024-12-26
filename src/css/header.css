@@ -119,22 +119,27 @@ html {
 
     .header {
         position: absolute;
+        display: flex;
+        align-items: center;
         width: 100%;
-        padding: 32px 16px;
+        max-width: 100vw;
+        padding: 4vw 2vw;
     }
 
     .header .container {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: nowrap;
+        margin: 0 auto;
     }
 
     .header_logo {
         display: flex;
-        gap: 8px;
+        gap: 2vw;
     }
 
     .logo_img {
-        width: 80px;
+        width: 20vw;
+        max-width: 80px;
     }
 
     .header_menu_img {
@@ -144,12 +149,16 @@ html {
     }
 
 
+
     .menu_container {
         display: none;
     }
 
     .order_btn.wide {
         display: none;
+    }
+    .logo_legend{
+        margin-right: 35vw;
     }
 }
 
